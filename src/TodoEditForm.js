@@ -13,6 +13,7 @@ function TodoEditForm({ id, task, editTodo, toggleIsEditing }) {
         reset();
         toggleIsEditing();
       }}
+      style={{ marginLeft: "1rem", width: "75%" }}
     >
       <TextField
         value={value}
@@ -20,6 +21,7 @@ function TodoEditForm({ id, task, editTodo, toggleIsEditing }) {
         variant="standard"
         margin="normal"
         fullWidth
+        autoFocus
       />
     </form>
   );
