@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, memo } from "react";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
@@ -11,10 +11,10 @@ import useToggleState from "./hooks/useToggleState";
 
 import TodoEditForm from "./TodoEditForm";
 
-import { TodosContext } from "./contexts/todosContext";
+import { DispatchContext } from "./contexts/todosContext";
 
 function Todo({ task, completed, id }) {
-  const { deleteTodo, toggleChecked } = useContext(TodosContext);
+  const dispatch = useContext(DispatchContext);
   const [isEditing, toggleIsEditing] = useToggleState(false);
   return (
     <ListItem style={{ height: "64px" }}>
@@ -25,7 +25,7 @@ function Todo({ task, completed, id }) {
           <Checkbox
             checked={completed}
             tabIndex={-1}
-            onClick={() => toggleChecked(id)}
+            onClick={() => dispatch({ type: "TOGGLE", id: id })}
           />
           <ListItemText
             style={{ textDecoration: completed ? "line-through" : "none" }}
@@ -43,7 +43,7 @@ function Todo({ task, completed, id }) {
             <IconButton
               edge="end"
               aria-label="Edit"
-              onClick={() => deleteTodo(id)}
+              onClick={() => dispatch({ type: "REMOVE", id: id })}
             >
               <DeleteOutlineOutlinedIcon />
             </IconButton>
@@ -54,4 +54,4 @@ function Todo({ task, completed, id }) {
   );
 }
 
-export default Todo;
+export default memo(Todo);
