@@ -4,17 +4,19 @@ import Typography from "@material-ui/core/Typography";
 import AppBar from "@material-ui/core/Appbar";
 import ToolBar from "@material-ui/core/Toolbar";
 import Grid from "@material-ui/core/Grid";
+import Switch from "@material-ui/core/Switch";
 
 import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
 import { TodosProvider } from "./contexts/todosContext";
 
-function TodoApp() {
+function TodoApp({ toggleDark, isDark }) {
   return (
-    <Paper style={{ padding: 0, margin: 0, height: "100vh" }} elevation={0}>
+    <div style={{ padding: 0, margin: 0, height: "100vh" }}>
       <AppBar position="static" style={{ height: "64px" }}>
         <ToolBar>
           <Typography color="inherit">Todo List</Typography>
+          <Switch checked={isDark} onChange={toggleDark} />
         </ToolBar>
       </AppBar>
       <Grid container justify="center">
@@ -25,7 +27,7 @@ function TodoApp() {
           </TodosProvider>
         </Grid>
       </Grid>
-    </Paper>
+    </div>
   );
 }
 
