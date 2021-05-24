@@ -1,17 +1,14 @@
 import TodoApp from "./TodoApp";
-import { ThemeProvider, createMuiTheme, CssBaseline } from "@material-ui/core";
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import useToggleState from "./hooks/useToggleState";
+import { CssBaseline } from "@material-ui/core";
+import darkTheme from "./styles/darkTheme";
+import lightTheme from "./styles/lightTheme";
 
 function App() {
   const [isDark, toggleDark] = useToggleState(false);
-
-  const theme = createMuiTheme({
-    palette: {
-      type: isDark ? "dark" : "light",
-    },
-  });
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={createMuiTheme(isDark ? darkTheme : lightTheme)}>
       <CssBaseline />
       <TodoApp toggleDark={toggleDark} isDark={isDark} />
     </ThemeProvider>
