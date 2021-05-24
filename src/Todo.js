@@ -7,6 +7,8 @@ import Checkbox from "@material-ui/core/Checkbox";
 import EditOutlinedIcon from "@material-ui/icons/EditOutlined";
 import DeleteOutlineOutlinedIcon from "@material-ui/icons/DeleteOutlineOutlined";
 
+import ClickAwayListener from "react-click-away-listener";
+
 import useToggleState from "./hooks/useToggleState";
 
 import TodoEditForm from "./TodoEditForm";
@@ -19,7 +21,9 @@ function Todo({ task, completed, id }) {
   return (
     <ListItem style={{ height: "64px" }}>
       {isEditing ? (
-        <TodoEditForm id={id} task={task} toggleIsEditing={toggleIsEditing} />
+        <ClickAwayListener onClickAway={toggleIsEditing}>
+          <TodoEditForm id={id} task={task} toggleIsEditing={toggleIsEditing} />
+        </ClickAwayListener>
       ) : (
         <>
           <Checkbox
@@ -33,16 +37,12 @@ function Todo({ task, completed, id }) {
             {task}
           </ListItemText>
           <ListItemSecondaryAction>
-            <IconButton
-              edge="end"
-              aria-label="Delete"
-              onClick={toggleIsEditing}
-            >
+            <IconButton edge="end" aria-label="Edit" onClick={toggleIsEditing}>
               <EditOutlinedIcon />
             </IconButton>
             <IconButton
               edge="end"
-              aria-label="Edit"
+              aria-label="Delete"
               onClick={() => dispatch({ type: "REMOVE", id: id })}
             >
               <DeleteOutlineOutlinedIcon />
