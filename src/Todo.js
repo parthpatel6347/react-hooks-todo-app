@@ -27,6 +27,7 @@ function Todo({ task, completed, id }) {
       ) : (
         <>
           <Checkbox
+            color="primary"
             checked={completed}
             tabIndex={-1}
             onClick={() => dispatch({ type: "TOGGLE", id: id })}
