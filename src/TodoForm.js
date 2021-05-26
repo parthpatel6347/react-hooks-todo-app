@@ -99,6 +99,7 @@ function TodoForm() {
                   margin="dense"
                   required
                   fullWidth
+                  autoFocus
                 />
               </form>
               <IconButton

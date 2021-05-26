@@ -9,6 +9,7 @@ import WbSunnyOutlinedIcon from "@material-ui/icons/WbSunnyOutlined";
 import Brightness2OutlinedIcon from "@material-ui/icons/Brightness2Outlined";
 import { makeStyles } from "@material-ui/core/styles";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { CssBaseline } from "@material-ui/core";
 
 import darkTheme from "./styles/darkTheme";
 import lightTheme from "./styles/lightTheme";
@@ -27,7 +28,7 @@ const useStyles = makeStyles({
     height: "100vh",
     backgroundPosition: "center",
     backgroundSize: "cover",
-    overflow: "scroll",
+    overflowY: "auto",
     transition: "all 0.5s",
     paddingBottom: "2rem",
   },
@@ -52,6 +53,7 @@ function TodoApp() {
   const classes = useStyles();
   return (
     <ThemeProvider theme={createMuiTheme(isDark ? darkTheme : lightTheme)}>
+      <CssBaseline />
       <div
         className={classes.root}
         style={{
