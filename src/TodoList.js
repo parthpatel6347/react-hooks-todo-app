@@ -24,7 +24,9 @@ function TodoList() {
           {todos.map((todo, i) => (
             <React.Fragment key={i}>
               <Todo {...todo} key={todo.id} />
-              {i < todos.length - 1 && <Divider />}
+              {i < todos.length - 1 && (
+                <Divider style={{ transition: "all 0.5s" }} />
+              )}
             </React.Fragment>
           ))}
         </List>
