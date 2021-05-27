@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
   text: {
     textDecoration: (props) => (props.completed ? "line-through" : "none"),
     textDecorationColor: `${theme.palette.primary.main} !important`,
-    textDecorationThickness: "35% !important",
+    textDecorationThickness: "25% !important",
   },
 }));
 
@@ -73,6 +73,7 @@ const Todo = SortableElement(({ id, completed, task, last, isSorting }) => {
           <>
             <DragHandle />
             <Checkbox
+              disableRipple
               className={classes.checkbox}
               color="primary"
               checked={completed}
