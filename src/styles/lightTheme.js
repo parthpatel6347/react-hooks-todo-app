@@ -2,7 +2,7 @@ const lightTheme = {
   palette: {
     type: "light",
     primary: {
-      main: "#29D391",
+      main: "#D94A98",
     },
     secondary: {
       main: "rgba(255,255,255,0.7)",

@@ -21,14 +21,26 @@ import bgLight from "./styles/imgs/bgLight.png";
 import bgDark from "./styles/imgs/bgDark.png";
 import { DarkModeContext } from "./contexts/todosContext";
 
-const useStyles = makeStyles({
-  root: {
+const useStyles = makeStyles((theme) => ({
+  background: {
+    position: "fixed",
+    left: 0,
+    right: 0,
     padding: 0,
     margin: 0,
-    height: "100vh",
+    zIndex: 0,
+    backgroundImage: `url(${bgLight})`,
+    filter: (props) => (props.isDark ? "brightness(60%)" : "brightness(100%)"),
     backgroundPosition: "center",
     backgroundSize: "cover",
     overflowY: "auto",
+    transition: "all 0.5s",
+    height: "100vh",
+  },
+  root: {
+    zIndex: "1",
+    padding: 0,
+    margin: 0,
     transition: "all 0.5s",
     paddingBottom: "2rem",
   },
@@ -46,20 +58,16 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "center",
   },
-});
+}));
 
 function TodoApp() {
   const { isDark, toggleIsDark } = useContext(DarkModeContext);
-  const classes = useStyles();
+  const classes = useStyles({ isDark });
   return (
     <ThemeProvider theme={createMuiTheme(isDark ? darkTheme : lightTheme)}>
       <CssBaseline />
-      <div
-        className={classes.root}
-        style={{
-          backgroundImage: `url(${isDark ? bgDark : bgLight})`,
-        }}
-      >
+      <div className={classes.background}></div>
+      <div className={classes.root}>
         <AppBar
           className={classes.appBar}
           color="secondary"
@@ -79,17 +87,18 @@ function TodoApp() {
                 spacing={0.5}
               >
                 <Grid item>
-                  <WbSunnyOutlinedIcon fontSize="small" />
+                  <span className="material-icons-outlined">light_mode</span>
                 </Grid>
                 <Grid item>
                   <Switch
+                    disableRipple
                     color="primary"
                     checked={isDark}
                     onChange={toggleIsDark}
                   />
                 </Grid>
                 <Grid item>
-                  <Brightness2OutlinedIcon fontSize="small" />
+                  <span className="material-icons-outlined">dark_mode</span>
                 </Grid>
               </Grid>
             </div>

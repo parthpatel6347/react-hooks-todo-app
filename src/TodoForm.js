@@ -63,15 +63,6 @@ function TodoForm() {
           New Task
         </Button>
       ) : (
-        //  <Fab
-        //   color="primary"
-        //  className={classes.addBtn}
-        //   onClick={toggleIsAdding}
-        //   aria-label="add task"
-        //   disableRipple
-        // >
-        //   <AddRoundedIcon />
-        // </Fab>
         <ClickAwayListener onClickAway={toggleIsAdding}>
           <Grow
             in={isAdding}

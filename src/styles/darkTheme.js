@@ -2,13 +2,13 @@ const darkTheme = {
   palette: {
     type: "dark",
     primary: {
-      main: "#29D391",
+      main: "#D94A98",
     },
     secondary: {
       main: "rgba(66,66,66,0.7)",
     },
     background: {
-      paper: "rgba(66,66,66,0.4)",
+      paper: "rgba(33,33,33,0.6)",
     },
   },
   shape: {

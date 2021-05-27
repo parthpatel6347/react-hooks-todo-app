@@ -22,7 +22,7 @@ import TodoEditForm from "./TodoEditForm";
 import { DispatchContext } from "./contexts/todosContext";
 import { Typography } from "@material-ui/core";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     height: "64px",
     "&:hover $icon": {
@@ -42,10 +42,10 @@ const useStyles = makeStyles({
   },
   text: {
     textDecoration: (props) => (props.completed ? "line-through" : "none"),
-    textDecorationColor: "rgba(41,211,145,0.7) !important",
+    textDecorationColor: `${theme.palette.primary.main} !important`,
     textDecorationThickness: "35% !important",
   },
-});
+}));
 
 const Todo = SortableElement(({ id, completed, task, last, isSorting }) => {
   const classes = useStyles({ completed, isSorting });
