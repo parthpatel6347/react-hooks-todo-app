@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import arrayMove from "array-move";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -14,6 +15,8 @@ const reducer = (state, action) => {
       return state.map((todo) =>
         todo.id === action.id ? { ...todo, task: action.newTask } : todo
       );
+    case "ARRANGE":
+      return arrayMove(state, action.oldIndex, action.newIndex);
     default:
       return state;
   }
