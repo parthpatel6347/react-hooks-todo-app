@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/parthpatel6347/react-hooks-todo-app/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/parthpatel6347/react-hooks-todo-app/static/js/main.72c3badb.chunk.js",
+    "main.js.map": "/parthpatel6347/react-hooks-todo-app/static/js/main.72c3badb.chunk.js.map",
+    "runtime-main.js": "/parthpatel6347/react-hooks-todo-app/static/js/runtime-main.056db64e.js",
+    "runtime-main.js.map": "/parthpatel6347/react-hooks-todo-app/static/js/runtime-main.056db64e.js.map",
+    "static/js/2.567ec208.chunk.js": "/parthpatel6347/react-hooks-todo-app/static/js/2.567ec208.chunk.js",
+    "static/js/2.567ec208.chunk.js.map": "/parthpatel6347/react-hooks-todo-app/static/js/2.567ec208.chunk.js.map",
+    "static/js/3.b7aa5a10.chunk.js": "/parthpatel6347/react-hooks-todo-app/static/js/3.b7aa5a10.chunk.js",
+    "static/js/3.b7aa5a10.chunk.js.map": "/parthpatel6347/react-hooks-todo-app/static/js/3.b7aa5a10.chunk.js.map",
+    "index.html": "/parthpatel6347/react-hooks-todo-app/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/parthpatel6347/react-hooks-todo-app/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.567ec208.chunk.js.LICENSE.txt": "/parthpatel6347/react-hooks-todo-app/static/js/2.567ec208.chunk.js.LICENSE.txt",
+    "static/media/bgDark.68016fd3.png": "/parthpatel6347/react-hooks-todo-app/static/media/bgDark.68016fd3.png",
+    "static/media/bgLight.e5c87708.png": "/parthpatel6347/react-hooks-todo-app/static/media/bgLight.e5c87708.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.056db64e.js",
+    "static/js/2.567ec208.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.72c3badb.chunk.js"
+  ]
+}
