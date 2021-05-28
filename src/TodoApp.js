@@ -77,7 +77,11 @@ function TodoApp() {
           <ToolBar className={classes.toolBar}>
             <Typography color="inherit" variant="h5" className={classes.title}>
               <AssignmentTurnedInIcon color="primary" />
+<<<<<<< HEAD
               Todo Listtttttttt
+=======
+              Todo Listttt
+>>>>>>> 714d54533e53c1a80aafd87de505b6afef9c4ebe
             </Typography>
             <div>
               <Grid
