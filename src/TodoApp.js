@@ -18,7 +18,6 @@ import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
 import { TodosProvider } from "./contexts/todosContext";
 import bgLight from "./styles/imgs/bgLight.png";
-import bgDark from "./styles/imgs/bgDark.png";
 import { DarkModeContext } from "./contexts/todosContext";
 
 const useStyles = makeStyles((theme) => ({
