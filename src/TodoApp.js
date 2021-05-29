@@ -52,6 +52,13 @@ const useStyles = makeStyles((theme) => ({
     width: "70%",
     justifyContent: "space-between",
     transition: "all 0.2s",
+    height: "100%",
+    [theme.breakpoints.down("sm")]: {
+      width: "90%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "95%",
+    },
   },
   title: {
     display: "flex",
@@ -104,7 +111,7 @@ function TodoApp() {
           </ToolBar>
         </AppBar>
         <Grid container justify="center">
-          <Grid item xs={11} md={8} lg={4}>
+          <Grid item xs={11} sm={8} md={6} lg={4}>
             <TodosProvider>
               <TodoForm />
               <TodoList />
