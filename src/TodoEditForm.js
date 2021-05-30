@@ -2,25 +2,32 @@ import React, { useContext } from "react";
 import TextField from "@material-ui/core/TextField";
 import IconButton from "@material-ui/core/IconButton";
 import ClearRoundedIcon from "@material-ui/icons/ClearRounded";
+import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
+
 import { makeStyles } from "@material-ui/core/styles";
 
 import useInputState from "./hooks/useInputState";
 import { DispatchContext } from "./contexts/todosContext";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     width: "100%",
   },
   textField: {
     flexGrow: "1",
+    display: "flex",
   },
   closeBtn: {
     height: "50px",
     width: "50px",
     alignSelf: "center",
+    [theme.breakpoints.down("xs")]: {
+      height: "40px",
+      width: "40px",
+    },
   },
-});
+}));
 
 function TodoEditForm({ id, task, toggleIsEditing }) {
   const classes = useStyles();
@@ -49,6 +56,13 @@ function TodoEditForm({ id, task, toggleIsEditing }) {
           fullWidth
           autoFocus
         />
+        <IconButton
+          type="submit"
+          className={classes.closeBtn}
+          aria-label="cancel"
+        >
+          <CheckRoundedIcon />
+        </IconButton>
       </form>
       <IconButton
         onClick={toggleIsEditing}

@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     display: (props) => props.isSorting && "none",
     opacity: "0",
     transition: "color 0.5s",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       opacity: ".8",
     },
   },
@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     textDecorationColor: `${theme.palette.primary.main} !important`,
     textDecorationThickness: "3px !important",
     width: "80%",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       width: "75%",
     },
   },

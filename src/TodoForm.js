@@ -7,7 +7,7 @@ import AddRoundedIcon from "@material-ui/icons/AddRounded";
 import ClearRoundedIcon from "@material-ui/icons/ClearRounded";
 import Grow from "@material-ui/core/Grow";
 import { makeStyles } from "@material-ui/core/styles";
-import Input from "@material-ui/core/Input";
+import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
 
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
@@ -15,7 +15,7 @@ import useInputState from "./hooks/useInputState";
 import { DispatchContext } from "./contexts/todosContext";
 import useToggleState from "./hooks/useToggleState";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     justifyContent: "flex-end",
@@ -29,6 +29,7 @@ const useStyles = makeStyles({
   },
   textField: {
     flexGrow: "1",
+    display: "flex",
   },
   addBtn: {
     margin: "1.5rem 0",
@@ -40,8 +41,12 @@ const useStyles = makeStyles({
     height: "50px",
     width: "50px",
     alignSelf: "center",
+    [theme.breakpoints.down("xs")]: {
+      height: "40px",
+      width: "40px",
+    },
   },
-});
+}));
 
 function TodoForm() {
   const classes = useStyles();
@@ -82,7 +87,7 @@ function TodoForm() {
                   toggleIsAdding();
                 }}
               >
-                <Input
+                <TextField
                   value={value}
                   onChange={handleChange}
                   label="Add new task"
@@ -91,19 +96,16 @@ function TodoForm() {
                   required
                   fullWidth
                   autoFocus
+                />
+                <IconButton
+                  type="submit"
+                  className={classes.closeBtn}
+                  aria-label="cancel"
                 >
-                  {/* <TextField
-                    value={value}
-                    onChange={handleChange}
-                    label="Add new task"
-                    variant="standard"
-                    margin="dense"
-                    required
-                    fullWidth
-                    autoFocus
-                  /> */}
-                </Input>
+                  <CheckRoundedIcon />
+                </IconButton>
               </form>
+
               <IconButton
                 onClick={toggleIsAdding}
                 className={classes.closeBtn}
