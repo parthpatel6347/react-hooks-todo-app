@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/react-hooks-todo-app/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/react-hooks-todo-app/static/js/main.7b7775a2.chunk.js",
-    "main.js.map": "/react-hooks-todo-app/static/js/main.7b7775a2.chunk.js.map",
-    "runtime-main.js": "/react-hooks-todo-app/static/js/runtime-main.b5744a6e.js",
-    "runtime-main.js.map": "/react-hooks-todo-app/static/js/runtime-main.b5744a6e.js.map",
-    "static/js/2.cad9e5be.chunk.js": "/react-hooks-todo-app/static/js/2.cad9e5be.chunk.js",
-    "static/js/2.cad9e5be.chunk.js.map": "/react-hooks-todo-app/static/js/2.cad9e5be.chunk.js.map",
-    "static/js/3.d35c0aaf.chunk.js": "/react-hooks-todo-app/static/js/3.d35c0aaf.chunk.js",
-    "static/js/3.d35c0aaf.chunk.js.map": "/react-hooks-todo-app/static/js/3.d35c0aaf.chunk.js.map",
+    "main.js": "/react-hooks-todo-app/static/js/main.379ce0ea.chunk.js",
+    "main.js.map": "/react-hooks-todo-app/static/js/main.379ce0ea.chunk.js.map",
+    "runtime-main.js": "/react-hooks-todo-app/static/js/runtime-main.5cbe059b.js",
+    "runtime-main.js.map": "/react-hooks-todo-app/static/js/runtime-main.5cbe059b.js.map",
+    "static/js/2.062d17f4.chunk.js": "/react-hooks-todo-app/static/js/2.062d17f4.chunk.js",
+    "static/js/2.062d17f4.chunk.js.map": "/react-hooks-todo-app/static/js/2.062d17f4.chunk.js.map",
+    "static/js/3.a8c4716a.chunk.js": "/react-hooks-todo-app/static/js/3.a8c4716a.chunk.js",
+    "static/js/3.a8c4716a.chunk.js.map": "/react-hooks-todo-app/static/js/3.a8c4716a.chunk.js.map",
     "index.html": "/react-hooks-todo-app/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/react-hooks-todo-app/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.cad9e5be.chunk.js.LICENSE.txt": "/react-hooks-todo-app/static/js/2.cad9e5be.chunk.js.LICENSE.txt",
+    "static/js/2.062d17f4.chunk.js.LICENSE.txt": "/react-hooks-todo-app/static/js/2.062d17f4.chunk.js.LICENSE.txt",
     "static/media/bgLight.e5c87708.png": "/react-hooks-todo-app/static/media/bgLight.e5c87708.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.b5744a6e.js",
-    "static/js/2.cad9e5be.chunk.js",
+    "static/js/runtime-main.5cbe059b.js",
+    "static/js/2.062d17f4.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.7b7775a2.chunk.js"
+    "static/js/main.379ce0ea.chunk.js"
   ]
 }
