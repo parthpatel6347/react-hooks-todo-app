@@ -1,10 +1,7 @@
 import React, { useContext, useState } from "react";
 import Paper from "@material-ui/core/Paper";
-import Divider from "@material-ui/core/Divider";
 import { makeStyles } from "@material-ui/core/styles";
-import arrayMove from "array-move";
 
-import Todo from "./Todo";
 import { TodosContext } from "./contexts/todosContext";
 import { DispatchContext } from "./contexts/todosContext";
 

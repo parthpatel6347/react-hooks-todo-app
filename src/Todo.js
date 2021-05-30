@@ -25,6 +25,7 @@ import { Typography } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "64px",
+    paddingLeft: "0",
     "&:hover $icon": {
       opacity: 1,
     },
@@ -33,17 +34,28 @@ const useStyles = makeStyles((theme) => ({
     display: (props) => props.isSorting && "none",
     opacity: "0",
     transition: "color 0.5s",
+    [theme.breakpoints.down("sm")]: {
+      opacity: ".8",
+    },
   },
   checkbox: {
     transition: "all 0.5s",
+    paddingLeft: "0",
   },
   dragHandle: {
     cursor: "grab",
+    height: "100%",
+    width: "48px",
+    padding: "0 12px",
   },
   text: {
     textDecoration: (props) => (props.completed ? "line-through" : "none"),
     textDecorationColor: `${theme.palette.primary.main} !important`,
-    textDecorationThickness: "25% !important",
+    textDecorationThickness: "3px !important",
+    width: "80%",
+    [theme.breakpoints.down("sm")]: {
+      width: "75%",
+    },
   },
 }));
 
@@ -80,8 +92,8 @@ const Todo = SortableElement(({ id, completed, task, last, isSorting }) => {
               tabIndex={-1}
               onClick={() => dispatch({ type: "TOGGLE", id: id })}
             />
-            <ListItemText className={classes.text}>
-              <Typography noWrap style={{ width: "80%" }}>
+            <ListItemText>
+              <Typography noWrap className={classes.text}>
                 {task}
               </Typography>
             </ListItemText>

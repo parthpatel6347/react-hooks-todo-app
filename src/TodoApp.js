@@ -5,8 +5,6 @@ import ToolBar from "@material-ui/core/Toolbar";
 import Grid from "@material-ui/core/Grid";
 import Switch from "@material-ui/core/Switch";
 import AssignmentTurnedInIcon from "@material-ui/icons/AssignmentTurnedIn";
-import WbSunnyOutlinedIcon from "@material-ui/icons/WbSunnyOutlined";
-import Brightness2OutlinedIcon from "@material-ui/icons/Brightness2Outlined";
 import { makeStyles } from "@material-ui/core/styles";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { CssBaseline } from "@material-ui/core";
@@ -86,12 +84,7 @@ function TodoApp() {
               TodoList
             </Typography>
             <div>
-              <Grid
-                component="label"
-                container
-                alignItems="center"
-                spacing={0.5}
-              >
+              <Grid component="label" container alignItems="center">
                 <Grid item>
                   <span className="material-icons-outlined">light_mode</span>
                 </Grid>
