@@ -7,6 +7,7 @@ import AddRoundedIcon from "@material-ui/icons/AddRounded";
 import ClearRoundedIcon from "@material-ui/icons/ClearRounded";
 import Grow from "@material-ui/core/Grow";
 import { makeStyles } from "@material-ui/core/styles";
+import Input from "@material-ui/core/Input";
 
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
@@ -81,7 +82,7 @@ function TodoForm() {
                   toggleIsAdding();
                 }}
               >
-                <TextField
+                <Input
                   value={value}
                   onChange={handleChange}
                   label="Add new task"
@@ -90,7 +91,18 @@ function TodoForm() {
                   required
                   fullWidth
                   autoFocus
-                />
+                >
+                  {/* <TextField
+                    value={value}
+                    onChange={handleChange}
+                    label="Add new task"
+                    variant="standard"
+                    margin="dense"
+                    required
+                    fullWidth
+                    autoFocus
+                  /> */}
+                </Input>
               </form>
               <IconButton
                 onClick={toggleIsAdding}
