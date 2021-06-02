@@ -40,7 +40,6 @@ function TodoList() {
       newIndex: newIndex,
     });
     sortEnd();
-    console.log("sortend");
   };
 
   if (todos.length)
