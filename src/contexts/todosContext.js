@@ -6,7 +6,7 @@ import { useDarkMode } from "../hooks/useDarkMode";
 const initialTodos = [
   { id: 1, task: "Buy milk", completed: false },
   { id: 2, task: "Check e-mails", completed: false },
-  { id: 3, task: "Set dentist appointment", completed: false },
+  { id: 3, task: "Set doctor's appointment", completed: false },
 ];
 
 export const TodosContext = createContext();
