@@ -3,7 +3,11 @@ import todoReducer from "../reducers/todoReducer";
 import { useLocalStorageReducer } from "../hooks/useLocalStorageReducer";
 import { useDarkMode } from "../hooks/useDarkMode";
 
-const initialTodos = [{ id: 1, task: "Brush Teeth", completed: false }];
+const initialTodos = [
+  { id: 1, task: "Buy milk", completed: false },
+  { id: 2, task: "Check e-mails", completed: false },
+  { id: 3, task: "Set dentist appointment", completed: false },
+];
 
 export const TodosContext = createContext();
 export const DispatchContext = createContext();
