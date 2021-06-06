@@ -116,7 +116,7 @@ const Todo = SortableElement(({ id, completed, task, last, isSorting }) => {
           </>
         )}
       </ListItem>
-      {!last ? null : <Divider />}
+      {!last ? null : <Divider style={{ transition: "all 0.5s" }} />}
     </div>
   );
 });
