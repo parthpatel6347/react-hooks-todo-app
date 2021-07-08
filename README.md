@@ -1,6 +1,6 @@
 #### React Project
 
-# Todo List
+# ListApp
 
 A beautiful Todo List
 
